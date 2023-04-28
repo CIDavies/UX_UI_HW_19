@@ -1,0 +1,330 @@
+html {
+    font-size: 90%;
+}
+
+body {
+    background: #F0EAEA;
+    margin: 0;
+}
+
+/*Text styles*/
+
+h1 {
+    font-size: 2.6rem;
+    font-family: 'Yeseva One', Georgia, serif;
+}
+
+.introText {
+    font-size: 1.8rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-family: 'Yeseva One', Georgia, serif;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: 'Yeseva One', Georgia, serif;
+}
+
+p {
+    font-size: 1.4rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+.contentLink {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+.contentLink:hover {
+    color: #b62496; 
+}
+
+
+
+/*Header styles*/
+
+.navigation {
+    display: flex;
+    align-items:flex-start;
+}
+
+.logo {
+    height: 100px;
+    margin: 1%;
+}
+
+.navigation ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #1a1a17;
+    padding: 25px 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+.navigation a:hover {
+    color: #b62496;   
+}
+
+.CV {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.8rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a17;
+    border-radius: 30px;
+    background-color: #6ab3b3;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.CV:hover {
+    background-color: rgba(78, 151, 151, 1);
+}
+
+.CV:active {
+    box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.4), inset 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*Hero styles*/
+
+.heroContent {
+    display: flex;
+    width: 100vw;
+    align-items: start;
+}
+
+.heroItems {
+    padding: 20px;
+    margin: 20px;
+}
+
+.heroImage {
+    border-radius: 50%;
+    height: 230px;
+    margin: 100px 50px 40px 40px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+/*Module 18 Skills section styles - CSS Flex*/
+.mySkills {
+    background-color: rgba(161, 197, 240, 0.6);
+}
+
+.skillsContainer {
+    display: flex;
+}
+
+.skillsItem {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.skillsImg {
+    border: 16px solid #a1c5f0;
+    width: 25%;
+}
+
+.mySkills h2 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+/*Module 18 Work section styles - CSS Grid*/
+
+.myWork h2 {
+    text-align: center;
+    margin: 40px;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'item1 item2'
+    'item3 item4';
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0% 5% 7% 5%;
+    background-color: #fcb6e8;
+}
+
+.item2 {
+    background-color: #fcb6e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CFIAImg {
+    width: 75%;
+    padding: 10px 0;
+}
+
+.item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0% 5% 7% 5%;
+    background-color: #faf2a0;
+}
+
+.item4 {
+    background-color: #faf2a0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.STWImg {
+    width: 75%;
+    padding: 10px 0;
+}
+
+.myWork p {
+    padding-bottom: 10%;
+}
+
+.myWork button {
+    border: 0;
+    padding: 0 20px;
+    line-height: 2;
+    font-size: 1.4rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a17;
+    border-radius: 30px;
+    background-color: #6ab3b3;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.myWork button:hover {
+    background-color: rgba(78, 151, 151, 1);
+}
+
+.mywork button:active {
+    box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.4), inset 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/*Contact section styles*/
+
+.CTAtext {
+    padding: 20px 10px 10px 10px;
+    margin: 10px;
+    font-size: 2.4rem;
+    font-family: 'Yeseva One', Georgia, serif;
+    text-align: center;
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.icon {
+    width: 5%;
+    margin: 1%;
+}
+
+/*Footer styles*/
+
+.footerNav {
+    display: flex;
+    align-items: baseline;
+}
+
+.footerNav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.footerNav a {
+    text-decoration: none;
+    color: #1a1a17;
+    width: 100px;
+    padding: 25px 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+.footerNav a:hover {
+    color: #b62496;   
+}
+
+.copyrightText {
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    font-weight: 300;
+    font-family: 'Oxygen', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+/*Module 18 Media Query*/
+
+@media only screen and (max-width: 600px){
+    .skillsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .skillsItem {
+        width: 100%;
+    }
+
+    .workGrid {
+        display: grid;
+        width: 100vw;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'item2'
+        'item1'
+        'item4'
+        'item3';
+    }
+    .heroImage {
+        display:none;
+    }
+    html {
+        font-size: 70%;
+    }
+}
