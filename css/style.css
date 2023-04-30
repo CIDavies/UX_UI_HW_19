@@ -1,10 +1,10 @@
 html {
     font-size: 90%;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #F0EAEA;
-    margin: 0;
+    background: #FFFCFC;
 }
 
 /*Text styles*/
@@ -51,64 +51,87 @@ p {
 
 .navigation {
     display: flex;
-    align-items:flex-start;
+    align-items:center;
 }
 
 .logo {
     height: 100px;
-    margin: 1%;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .navigation ul {
     display: flex;
     margin-left: auto;
     list-style: none;
-    padding: 0;
-    margin-top: 20px;
+    padding-right: 20px;
 }
 
 .navigation a {
     text-decoration: none;
     color: #1a1a17;
-    padding: 25px 20px;
-    font-weight: bold;
+    padding: 20px 20px;
+    font-weight: 700;
     text-align: center;
     font-size: 2rem;
     font-family: 'Oxygen', Arial, sans-serif;
+}
+
+#activeNav {
+    color: #b62496;
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 .navigation a:hover {
     color: #b62496;   
 }
 
-.CV {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1.8rem;
-    font-family: 'Oxygen', Arial, sans-serif;
-    font-weight: 700;
+/*Module 19 jQuery and JS - Modal */
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
     text-align: center;
+}
+
+.modal-content #CTAtext {
+    color: #b62496;
+}
+
+.close {
     color: #1a1a17;
-    border-radius: 30px;
-    background-color: #6ab3b3;
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.4);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.CV:hover {
-    background-color: rgba(78, 151, 151, 1);
-}
-
-.CV:active {
-    box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.4), inset 3px 3px 4px rgba(0, 0, 0, 0.4);
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*Hero styles*/
 
 .heroContent {
     display: flex;
-    width: 100vw;
     align-items: start;
 }
 
@@ -120,102 +143,51 @@ p {
 .heroImage {
     border-radius: 50%;
     height: 230px;
-    margin: 100px 50px 40px 40px;
+    margin: 70px 50px 40px 40px;
     box-shadow: 5px 10px 18px #888888;
 }
 
-/*Module 18 Skills section styles - CSS Flex*/
-.mySkills {
-    background-color: rgba(161, 197, 240, 0.6);
-}
+/*NEW 19 Work section styles - CSS Grid*/
 
-.skillsContainer {
-    display: flex;
-}
-
-.skillsItem {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-}
-
-.skillsImg {
-    border: 16px solid #a1c5f0;
-    width: 25%;
-}
-
-.mySkills h2 {
-    text-align: center;
-    padding-top: 40px;
-}
-
-/*Module 18 Work section styles - CSS Grid*/
-
-.myWork h2 {
-    text-align: center;
-    margin: 40px;
-}
-
-.workGrid {
-    display: grid;
+.workContainer {
+    display:grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    'item1 item2'
-    'item3 item4';
+    'CFIA1 CFIA2'
+    'STW3 STW4';
 }
-
-.item1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 0% 5% 7% 5%;
-    background-color: #fcb6e8;
-}
-
-.item2 {
-    background-color: #fcb6e8;
+.CFIA1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.CFIAImg {
+.CFIA1Img {
     width: 75%;
     padding: 10px 0;
 }
 
-.item3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 0% 5% 7% 5%;
-    background-color: #faf2a0;
+.CFIA2 {
+    padding-right: 10vw;
 }
 
-.item4 {
-    background-color: #faf2a0;
+.STW3 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.STWImg {
+.STW3Img {
     width: 75%;
     padding: 10px 0;
 }
 
-.myWork p {
-    padding-bottom: 10%;
+.STW4 {
+    padding-right: 10vw;
 }
 
-.myWork button {
+button {
     border: 0;
     padding: 0 20px;
     line-height: 2;
@@ -223,26 +195,55 @@ p {
     font-family: 'Oxygen', Arial, sans-serif;
     font-weight: 700;
     text-align: center;
-    color: #1a1a17;
-    border-radius: 30px;
-    background-color: #6ab3b3;
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.4);
+    color: #FFFCFC;
+    border-radius: 10px;
+    background-image: linear-gradient(160deg, rgba(182,36,150,1), rgba(182,36,150,0.75));
 }
 
-.myWork button:hover {
-    background-color: rgba(78, 151, 151, 1);
+button:hover {
+    background-image: linear-gradient(160deg, rgba(133,26,109,1), rgba(133,26,109,0.7));
 }
 
-.mywork button:active {
-    box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.4), inset 3px 3px 4px rgba(0, 0, 0, 0.4);
+/*Module 19 Skills section*/
+
+.skills {
+    background: #a1c5f0;
+    margin: 20px;
+    padding: 20px;
 }
 
+.skillsContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'skill1 skill2 skill3'
+    'skill4 skill5 skill6';
+    grid-gap: 10px;
+}
+
+.skill {
+    padding: 10px;
+    margin: 10px;
+}
+
+.skill img {
+    width: 10vw;
+}
+
+.tools {
+    margin: 40px;
+}
+
+.tools li {
+    font-size: 1.4rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+}
 
 /*Contact section styles*/
 
-.CTAtext {
-    padding: 20px 10px 10px 10px;
+#CTAtext {
+    padding: 40px 10px 10px 10px;
     margin: 10px;
     font-size: 2.4rem;
     font-family: 'Yeseva One', Georgia, serif;
@@ -256,32 +257,32 @@ p {
 }
 
 .icon {
-    width: 5%;
-    margin: 1%;
+    width: 40px;
+    height: auto;
+    margin: 15px;
 }
+
 
 /*Footer styles*/
 
 .footerNav {
     display: flex;
-    align-items: baseline;
+    align-items: end;
 }
 
 .footerNav ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding-left: 20px;
     margin-top: 20px;
-    text-align: right;
 }
 
 .footerNav a {
     text-decoration: none;
     color: #1a1a17;
     width: 100px;
-    padding: 25px 20px;
-    font-weight: bold;
-    text-align: center;
+    padding: 20px 20px;
+    font-weight: 700;
     font-size: 2rem;
     font-family: 'Oxygen', Arial, sans-serif;
 }
@@ -299,32 +300,89 @@ p {
     font-size: 1.2rem;
 }
 
-/*Module 18 Media Query*/
+/*Media Queries*/
+
+@media only screen and (max-width: 730px){
+    .skillsContainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'skill1 skill2'
+        'skill3 skill4'
+        'skill5 skill6';
+        grid-gap: 10px;
+    }
+}
 
 @media only screen and (max-width: 600px){
-    .skillsContainer {
-        display: flex;
-        flex-direction: column;
-    }
-    .skillsItem {
-        width: 100%;
-    }
-
-    .workGrid {
-        display: grid;
-        width: 100vw;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        'item2'
-        'item1'
-        'item4'
-        'item3';
-    }
+    
     .heroImage {
         display:none;
     }
     html {
         font-size: 70%;
+    }
+
+    .logo {
+        padding-left: 10px;
+        padding-top: 0;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 10px;
+    }
+
+    .navigation li {
+        padding: 5px;
+    }
+
+    .workContainer {
+        display: grid;
+        width: 100vw;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'CFIA1'
+        'CFIA2'
+        'STW3'
+        'STW4';
+    }
+    .CFIA2 {
+        padding-left: 12.5vw;
+    }
+    .STW4 {
+        padding-left: 12.5vw;
+    }
+
+    .skillsContainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'skill1'
+        'skill2'
+        'skill3'
+        'skill4'
+        'skill5'
+        'skill6';
+        grid-gap: 10px;
+    }
+
+    .skill {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footerNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footerNav li {
+        padding: 5px;
     }
 }
