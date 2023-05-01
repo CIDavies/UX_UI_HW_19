@@ -52,6 +52,12 @@ p {
 .navigation {
     display: flex;
     align-items:center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #FFFCFC;
 }
 
 .logo {
@@ -65,6 +71,7 @@ p {
     margin-left: auto;
     list-style: none;
     padding-right: 20px;
+    background-color: #FFFCFC;
 }
 
 .navigation a {
@@ -91,7 +98,7 @@ p {
 .modal {
     display:none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -138,6 +145,7 @@ p {
 .heroItems {
     padding: 20px;
     margin: 20px;
+    margin-top: 120px;
 }
 
 .heroImage {
@@ -145,6 +153,7 @@ p {
     height: 230px;
     margin: 70px 50px 40px 40px;
     box-shadow: 5px 10px 18px #888888;
+    margin-top: 120px;
 }
 
 /*NEW 19 Work section styles - CSS Grid*/
@@ -263,6 +272,10 @@ button:hover {
     margin: 15px;
 }
 
+.icon:hover {
+    filter: invert(15%) sepia(44%) saturate(6455%) hue-rotate(300deg) brightness(106%) contrast(84%);
+
+}
 
 /*Footer styles*/
 
