@@ -74,7 +74,7 @@ p {
     background-color: #FFFCFC;
 }
 
-.navigation a {
+.navItem {
     text-decoration: none;
     color: #1a1a17;
     padding: 20px 20px;
@@ -82,6 +82,10 @@ p {
     text-align: center;
     font-size: 2rem;
     font-family: 'Oxygen', Arial, sans-serif;
+    border: 0;
+    background: transparent;
+    display: block;
+    cursor: pointer;
 }
 
 #activeNav {
@@ -90,7 +94,7 @@ p {
     font-weight: 700;
 }
 
-.navigation a:hover {
+.navItem:hover {
     color: #b62496;   
 }
 
@@ -196,7 +200,7 @@ p {
     padding-right: 10vw;
 }
 
-button {
+.button {
     border: 0;
     padding: 0 20px;
     line-height: 2;
@@ -209,7 +213,7 @@ button {
     background-image: linear-gradient(160deg, rgba(182,36,150,1), rgba(182,36,150,0.75));
 }
 
-button:hover {
+.button:hover {
     background-image: linear-gradient(160deg, rgba(133,26,109,1), rgba(133,26,109,0.7));
 }
 
@@ -348,9 +352,9 @@ button:hover {
         justify-content: center;
         align-items: flex-end;
         padding: 10px;
-    }
+    }    
 
-    .navigation li {
+    .navItem {
         padding: 5px;
     }
 
