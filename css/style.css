@@ -217,6 +217,15 @@ p {
     background-image: linear-gradient(160deg, rgba(133,26,109,1), rgba(133,26,109,0.7));
 }
 
+.buttonLink {
+    line-height: 2;
+    font-size: 1.4rem;
+    font-family: 'Oxygen', Arial, sans-serif;
+    font-weight: 700;
+    color: #FFFCFC;
+    text-decoration: none;
+}
+
 /*Module 19 Skills section*/
 
 .skills {
